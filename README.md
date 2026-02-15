@@ -19,7 +19,7 @@ SSH 登录你的 Ubuntu 服务器，执行：
 
 ```bash
 git clone https://github.com/wenject/nssctf_checkin.git
-cd nssctf-checkin
+cd nssctf_checkin
 ```
 
 ### 2. 运行一键部署
