@@ -12,13 +12,12 @@ echo "  ║   Author: wenject                ║"
 echo "  ╚══════════════════════════════════╝"
 echo ""
 
-# 检查 Python3
-if ! command -v python3 &> /dev/null; then
-    echo "[*] 未检测到 python3，正在安装..."
+# 检查并安装 Python3 和 pip3
+if ! command -v python3 &> /dev/null || ! command -v pip3 &> /dev/null; then
+    echo "[*] 安装 python3 / pip3..."
     sudo apt update && sudo apt install -y python3 python3-pip
-else
-    echo "[✓] Python3 已安装"
 fi
+echo "[✓] Python3 已就绪"
 
 # 安装依赖
 echo "[*] 安装 Python 依赖..."
