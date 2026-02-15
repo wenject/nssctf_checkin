@@ -19,9 +19,9 @@ if ! command -v python3 &> /dev/null || ! command -v pip3 &> /dev/null; then
 fi
 echo "[✓] Python3 已就绪"
 
-# 安装依赖
+# 安装/升级依赖（系统自带的 requests 版本可能太旧）
 echo "[*] 安装 Python 依赖..."
-pip3 install -r requirements.txt --break-system-packages 2>/dev/null || pip3 install -r requirements.txt
+pip3 install --upgrade requests urllib3 --break-system-packages 2>/dev/null || pip3 install --upgrade requests urllib3
 echo "[✓] 依赖安装完成"
 
 # 获取账号密码
